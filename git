@@ -1,0 +1,114 @@
+# Git commands
+
+# Create a new local repository:
+$ git init
+
+# Git configurations and settings:
+$ git config <setting> <command>
+
+# Running git config globally:
+$ git config --global user.email "email-id"
+$ git config --global user.name "user-name"
+
+# Running git config on the current repository settings:
+$ git config user.email "email-id"
+$ git config user.name "user-name"
+
+# Current state of the repository:
+$ git status
+
+# To add all files not staged:
+$ git add .
+
+# To stage a specific file:
+$ git add file-name
+
+# To stage an entire directory:
+$ git add directory
+
+# Adding a commit with message:
+$ git commit -m "Commit message in quotes"
+
+# Create a new branch:
+$ git branch <branch_name>
+
+# List all remote or local branches:
+$ git branch -a
+
+# Delete a branch:
+$ git branch -d <branch_name>
+
+# Checkout an existing branch:
+$ git checkout <branch_name>
+
+# Checkout and create a new branch with that name:
+$ git checkout -b <new_branch>
+
+# Merge changes into current branch:
+$ git merge <branch_name>
+
+# Add remote repository:
+$ git remote <command> <remote_name> <remote_URL>
+
+# List named remote repositories:
+$ git remote -v
+
+# Create a working copy of a local repository:
+$ git clone <remote_URL>
+
+# Send changes of local branch to remote repository:
+$ git push <remote_URL/remote_name> <branch>
+
+# Push all local branches to remote repository
+$ git push —all
+
+# Fetch and merge changes on the remote server to your working directory:
+$ git pull <branch_name> <remote_URL/remote_name>
+
+# Store current work with untracked files
+$ git stash -u
+
+# Bring stashed work back to the working directory
+$ git stash pop
+
+# Show entire git log
+$ git log
+
+# Show git log with date pameters
+$ git log --<after/before/since/until>=<date>
+
+# Show git log based on commit author
+$ git log --<author>="Author Name"
+
+# To remove a file from the working index (cached):
+$ git rm --cached <file name>
+
+# To delete a file (force):
+$ git rm -f <file name>
+
+# To remove an entire directory from the working index (cached):
+$ git rm -r --cached <directory name>
+
+# To delete an entire directory (force):
+$ git rm -r -f <file name>
+
+# You can use tagging to mark a significant changeset, such as a release:
+$ git tag 1.0.0 <commitID>
+
+# Push all tags to remote repository:
+$ git push --tags origin
+
+# Preview changes, before merging:
+$ git diff
+$ git diff --base <filename>
+$ git diff <sourcebranch> <targetbranch>
+
+# Undo git commit
+# Use --soft if you want to keep your changes:
+$ git reset --soft HEAD^
+# Use --hard if you don't care about keeping the changes:
+$ git reset --hard HEAD^
+
+# Undo git add before commit:
+$ git reset <file>
+$ git reset
